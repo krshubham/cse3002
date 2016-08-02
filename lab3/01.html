@@ -1,0 +1,77 @@
+<!-- Question 1:
+ 	Making the given two forms
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>Forms</title>
+ </head>
+ <style type="text/css">
+ 	form{
+ 		max-width: 40%;
+ 		height: auto;
+ 	}
+ 	legend{
+ 		border-top: 1px solid black;
+ 		border-right: 1px solid black;
+ 		border-left: 1px solid black;
+ 		border-top-right-radius: 5px;
+ 		border-top-left-radius: 5px;
+ 		padding: 5px;
+ 		background-color: lightpink;
+ 		color: #FF1493;
+ 	}
+ 	fieldset{
+ 		background-color: lightpink;
+ 		border-radius: 10px;
+ 		border: 2px solid #FF69B4;
+ 	}
+ 	input,select{
+ 		border-radius: 5px;
+ 		border:1px solid #FF69B4;
+ 		height: 2vw; 	
+ 		padding: 2px;
+ 		font-size: 1.5vw;
+ 		outline: none;
+ 		background: lightpink;
+ 	}
+ 	label{
+ 		margin-right: 5vw;
+ 		display: inline;
+ 		width: 250px;
+ 	}
+ 	div.form-group{
+ 		margin-bottom: 2vw;
+ 	}
+ </style>
+ <body>
+ 	<form>
+ 		<fieldset>
+ 			<legend>
+ 				Personal
+ 			</legend>
+ 			<div class="form-group">
+ 				<label for="name">
+ 					Name
+ 				</label>
+ 				<input type="text" name="name">
+ 			</div>
+ 			<div class="form-group">
+ 				<label>
+ 					Email
+ 				</label>
+ 				<input type="email" name="email">
+ 			</div>
+ 			<div class="form-group">
+ 				<label>Phone</label>
+ 				<input type="text" name="phone" />
+ 			</div>
+ 			<div class="form-group">
+ 				<label for="subject">Subject</label>
+ 				<select>
+ 					<option>Appointment</option>
+ 				</select>
+ 			</div>
+ 		</form>
+ 	</body>
+ 	</html>
