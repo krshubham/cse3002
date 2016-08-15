@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			var c=window.prompt("enter the customer number");			
+			var n=window.prompt("enter the value of data usage");
+			var bill=0;
+			if(n>=2001)
+			{
+				bill=790;
+				if(n>2900)
+				{
+					bill=bill+.30*(n-2900);
+				}
+			}
+		     else if(n>=1001)
+			{
+				bill=240;
+				if(n>1600)
+				{
+					bill=bill+.50*(n-1600);
+				}
+			}
+			 else if(n>=241)
+			{
+				bill=140;
+				if(n>300)
+				{
+					bill=bill+.30*(n-300);
+				}
+			}
+			else
+				{
+					bill=35;
+				}
+			document.write("the bill amount for account number"+c);
+			document.write(" is "+bill);
+
+		</script>
+
+	</head>
+
+</html>
+
