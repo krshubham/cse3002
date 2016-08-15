@@ -1,2 +1,2 @@
-# cse3002
-Codes for internet and web programming course (CSE3002)
+# cse3001lab
+The lab codes for cse 3001

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Alphabetized list</title>
+</head>
+<style type="text/css">
+	.container{
+		margin-left: 50px;
+	}
+</style>
+<body>
+	<div class="container">
+		<h1>Unalphabetized list</h1>
+		<div id="unalpha"></div>
+		<h1>Alphabetized list</h1>
+		<div id="alpha"></div>
+	</div>
+</body>
+<script type="text/javascript">
+	var names = ['Shubham','Shrey','Pushpit','Shwetank','Hargur','Aman','Raghav','Tushar','Numan','Prakhar'];
+	var another = ['Shubham','Shrey','Pushpit','Shwetank','Hargur','Aman','Raghav','Tushar','Numan','Prakhar'];
+	another.sort();
+	console.log(names);
+	var un = document.getElementById('unalpha');
+	for (var i=0; i < names.length; i++){
+		data = document.createElement('span');
+		data.innerHTML = names[i] +'<sub>'+(another.indexOf(names[i])+1) +'</sub>'+"<br />";
+		un.appendChild(data);
+	}
+	var alpha = document.getElementById('alpha');
+	for (var i=0; i < another.length; i++) {
+		data = document.createElement('span');
+		data.innerHTML = another[i] + "<br />";
+		alpha.appendChild(data);
+	}
+</script>
+</html>
