@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js forms</title>
+	<style type="text/css">
+		body{
+			border:1px solid #666666;
+			width: 50%;
+		}
+		form{
+			margin-top: 10px;
+			margin-left: 10px;
+			margin-bottom: 10px;
+		}
+		.form-group{
+			font-family: "Arial";
+			font-size:13px;
+			color: #4d4d4d;
+		}
+
+		.price{
+			font-weight: bold;
+		}
+
+		hr{
+			color: lightgray;
+			margin-left: 2px;
+		}
+
+		button{
+			background-color:#f0ad4e; 
+			color:white;
+			border-radius: 5px; 
+			height:35px;
+			width: 80px;
+		}
+
+	</style>
+</head>
+<body>
+	<form>
+		<h3 style="color:#4d4d4d; font-size:32px; font-family:Arial">Form Products</h3><hr>
+		<h4 style="color:#4d4d4d">My products</h4>
+		<div class="form-group">
+			<input type="checkbox" name="t-shirt" id="t-shirt">JotForm T-Shirt <span class="price">$9.99</span><br>
+			<select id="quantity">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select><label>Quantity</label>
+
+			<select>
+				<option>Red</option>
+				<option>Green</option>
+				<option>Blue</option>
+			</select><label>Color</label>
+
+			<select>
+				<option>XS</option>
+				<option>S</option>
+				<option>M</option>
+				<option>L</option>
+				<option>XL</option>
+				<option>XXL</option>
+			</select><label>T-Shirt Size</label><br><br>
+
+			<input type="checkbox" name="mug" id="mug">JotForm Mug <span class="price">$4.99</span><br><br>
+
+			<input type="checkbox" name="pencil" id="pencil">JotForm Pencil <span class="price">$2.99</span><br><br>
+
+			<input type="checkbox" name="stickers" id="Sticker">JotForm Sticker <span class="price">$1.99</span><br><br>
+
+			<label>Coupon Code:</label>
+			<input type="text" name="coupon"><br><br>
+			<!-- <button type="generate" id=""></button> -->
+
+		</div>
+		<h4 id="total" style="color:#4d4d4d;">Total</h4>
+		
+		<div align="center">
+			<button type="button" onclick="validate()">submit</button>
+		</div>
+	</form>
+</body>
+<script type="text/javascript">
+	var total=Number(0);
+	var tshirt=document.getElementById('t-shirt');
+	var mug=document.getElementById('mug');
+	var pencil=document.getElementById('pencil');
+	var sticker=document.getElementById('sticker');
+	var num=document.getElementById('quantity');
+	var quantity = Number(num.options[num.selectedIndex].value);
+	var area = document.getElementById('total');
+	var form = document.getElementById('form');
+
+	function validate(){
+		alert('hello');
+		console.log(area);
+		if(mug.checked){
+			total=total+Number(4.99);
+		}
+
+		if(pencil.checked){
+			total=total+Number(2.99);
+		}
+		
+		if(sticker.checked){
+			total=total+Number(1.99);
+		}
+		area.innerHTML='Total'+'$'+total;
+
+	}
+</script>
+</html>
