@@ -1,0 +1,10 @@
+body{
+	margin: 50px 50px 50px 50px;
+}
+img.fixed{
+	position: fixed;
+	padding-top: 200px;
+}
+p{
+	text-align: center;
+}

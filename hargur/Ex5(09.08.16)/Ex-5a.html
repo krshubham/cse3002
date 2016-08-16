@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		var int=0,flt=0,int_count=0,float_count=0;
+		var n=window.prompt("enter the number of products");
+		for(var i=0;i<parseInt(n);i++)
+		{
+			var p=window.prompt("enter the pri");
+			if(p==parseInt(p))
+			{
+				int_count++;
+				int=int+parseInt(p);
+			}
+			else
+			{
+				float_count++;
+				flt=flt+parseFloat(p);
+			}
+		}
+		document.write("Total integer items are :" + int_count);
+		document.write("<br>Sum items is :" + int);
+		document.write("<br>Total float itmes is :"+float_count);
+		document.write("<br>Their sum is :"+flt);
+	</script>
+</head>
+</html>
