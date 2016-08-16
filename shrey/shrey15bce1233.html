@@ -87,7 +87,8 @@
 			<div id="hide">
 				<label>Username:</label>
 				<input type="text" id="user" style="margin-left:40px;"><br><br>
-				<button type="text" id="username" onclick="enter()">Enter</button>
+				<button type="text" id="username" onclick="enter()">Enter</button><br>
+				<div id="generatedcoupon"></div>
 			</div>
 
 		</div>
@@ -142,8 +143,44 @@
 	function enter(){
 
 		var name= document.getElementById('user');
+		if(name.length>=7 && name.length<=8){
+			var code='';
+			if(name.length === 7){
+				code+=name[0].toUpperCase();
+				var vowels=['a','e','i','o','u'];
+				var count=Number(0);
 
+				for(var i in vowels){
+				for(var j in name){
+					if(vowels[j] === name[i]){
+						count++;
+						}				
+					}
+				}
 
+				code+=count;
+				code+=name[length-1];
+				code+='@';
+				code+=Number(name.length)-Number(count);
+			}
+
+			else if(name.length==8){
+
+				for(var i in name){
+				for(var j in letters){
+					if(name[i] === letters[j]){
+						code+=letters[j];
+						}
+					}
+				}
+			}	
+			var area = document.getElementById('generatedcoupon');
+				area.innerHTML = 'Coupon code:' + code;
+			}		
+		else{
+			var area = document.getElementById('generatedcoupon');
+				area.innerHTML = 'username must be of 7-8 letters';
+		}
 	}
 
 </script>
