@@ -34,6 +34,9 @@
 			height:35px;
 			width: 80px;
 		}
+		#hide{
+			display: none;
+		}
 
 	</style>
 </head>
@@ -74,8 +77,11 @@
 
 			<label>Coupon Code:</label>
 			<input type="text" name="coupon">
-			<button type="generate" id="gen" onclick="coupon()">Generate Coupon</button><br><br>
-
+			<button type="text" id="gen" onclick="coupon()">Generate Coupon</button><br>
+			<div id="hide">
+				<label>Username:</label>
+				<input type="text" id="user"><br><br>
+			</div>
 		</div>
 		<h4 id="total" style="color:#4d4d4d;">Total</h4>
 		
@@ -116,8 +122,8 @@
 
 	function coupon() {
 
-
-	
+		var show = document.getElementById('hide');
+		show.style.display='block'
 		
 	}
 
