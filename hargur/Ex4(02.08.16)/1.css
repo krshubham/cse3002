@@ -1,0 +1,52 @@
+fieldset{
+	width: 280px;
+	height: 150px;
+	padding: 20px;
+	color: #ff4da6;
+	border-color: #ff1a8c;
+	border-radius: 5%;
+	background-color: #ffcce6;
+}
+legend{
+	padding: 5px;
+	color: #ff4da6;
+	border-radius: 5%;
+	background-color: #ffcce6;
+	border-style: solid;
+	border-top-color: #ff1a8c;
+	border-left-color: #ff1a8c;
+	border-right-color: #ff1a8c;
+	border-bottom-color: #ffcce6;
+	border-width: 1px;
+}
+input{
+	margin: 7px;
+	margin-left: 30px;
+	color: #ff4da6;
+	border-color: #ff1a8c;
+	border-radius: 5%;
+	background-color: #ffcce6;
+}
+select{
+	margin: 7px;
+	margin-left: 30px;
+	color: #ff4da6;
+	border-color: #ff1a8c;
+	border-radius: 5%;
+	background-color: #ffcce6;
+}
+textarea{
+	width: 200px;
+	height: 90px;
+	margin: 7px;
+	vertical-align: top;
+	color: #ff4da6;
+	border-color: #ff1a8c;
+	border-radius: 5%;
+	background-color: #ffcce6;
+}
+input#submit{
+	margin-left: 100px;
+	color: white;
+	background-color: #ff4da6; 
+}
