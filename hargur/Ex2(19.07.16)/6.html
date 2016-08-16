@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+	table,td,th{
+		border: solid black 1px
+	}
+</style>
+</head>
+<body>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Value</th>
+	</tr>
+	<tr>
+		<td>Name</td>
+		<td><form><input type="text" name="name"></form></td>
+	</tr>
+	<tr>
+		<td>Sex</td>
+		<td><form><input type="radio" name="male">Male<br><input type="radio" name="female">Female</form></td>
+	</tr>
+	<tr>
+		<td>Eye color</td>
+		<td><select>
+			<option value="green">green</option>
+			<option value="blue">blue</option>
+			<option value="brown">brown</option>
+		</select></td>
+	</tr>
+	<tr>
+		<td>Check all that apply</td>
+		<td><form><input type="checkbox" name="6-feet">Over 6 feet tall<br><input type="checkbox" name="200-pound">Over 200 pounds</form></td>
+	</tr>
+	<tr rowspan="5">
+		<td colspan="2"><form>Describe your athletic ability:<br><textarea rows="3" cols="40"></textarea><br><input type="button" name="info" value="Enter my information"></form></td>
+	</tr>
+</table>
+</body>
+</html>
