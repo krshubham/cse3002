@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<title>JotForm Products</title>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+	.jumbotron{
+		text-align: center;
+	}
+</style>
+<body>
+	<div class="jumbotron">
+		<h1>Jotform products</h1>
+	</div>
+	<div class="container">
+		<form>
+			<h1>JotForm products</h1>
+			<hr>
+			<div class="form-group">
+				<input type="checkbox" id="tshirt">
+				<label for="tshirt" class="control-label">JotForm tshirt  $9.99</label>			
+			</div>
+			<div class="form-group">
+				<select id="quantity">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+				<label for="quantity">Quantity</label>
+				<select id="color">
+					<option>Red</option>
+					<option>Green</option>
+					<option>Blue</option>
+				</select>
+				<label for="color">Color</label>
+				<select id="size">
+					<option>XS</option>
+					<option>S</option>
+					<option>M</option>
+					<option>L</option>
+					<option>XL</option>
+					<option>XXL</option>
+				</select>
+				<label for="size">T-Shirt size</label>
+			</div>
+			<div class="form-group">
+				<input type="checkbox" id="mug">
+				<label for="mug" class="control-label">JotForm Mug $4.99</label>
+			</div>
+			<div class="form-group">
+				<input type="checkbox" id="pencil">
+				<label for="pencil">JotForm pencil $2.99</label>
+			</div>
+			<div class="form-group">
+				<input type="checkbox" id="sticker">
+				<label for="sticker">JotForm Sticker $1.99</label>
+			</div>
+			<div class="form-group">
+				<label for="coupon">Coupon Code:</label>
+				<input type="text">
+
+			</div>
+			<div class="form-group">
+				<h3 id="total">Total: $0.00</h3>
+			</div>
+			<div align="center">
+				<button type="button" onclick="validate()" class="btn btn-warning">Submit</button>
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript" src="01.js"></script>
+</body>
+</html>
