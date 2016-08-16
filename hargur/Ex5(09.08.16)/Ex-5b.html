@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function B()
+	{
+		//window.alert("Helo");
+		var UserId, DataUsed;
+		UserId = document.getElementById("customer_id").value;
+		DataUsed = document.getElementById("data_used").value;
+		if ((DataUsed>=0)&&(DataUsed<=240)) {
+			bill = 35;
+		}else if((DataUsed>=241)&&(DataUsed<=300)){
+			bill= 140;
+		}else if((DataUsed>300)&&(DataUsed<=1000)){
+			bill= 140 + 0.3*(DataUsed-300);
+		}else if((DataUsed>=1001)&&(DataUsed<=1600)){
+			bill= 240;
+		}else if((DataUsed>1600)&&(DataUsed<=2000)){
+			bill= 240 + 0.5*(DataUsed-1600);
+		}else if((DataUsed>=2001)&&(DataUsed<=2900)){
+			bill= 790;
+		}else{
+			bill= 790 + 0.3*(DataUsed-2900);
+		}
+		document.getElementById("bill").innerHTML= UserId + " your bill charges are: " + bill;
+	}
+	</script>
+<form>
+	Enter the your customer number: <input type="text" id="customer_id"><br>
+	Enter the amount of data used(in MBs): <input type="number" id="data_used"><br>
+	<button type="button" value="submit" onclick="B();">Generate Bill</button>
+</form>
+<p id="bill"></p>
+</body>
+</html>

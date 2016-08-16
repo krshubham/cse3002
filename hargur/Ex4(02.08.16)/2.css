@@ -1,0 +1,43 @@
+fieldset{
+	padding: 20px;
+	border-radius: 10px;
+	font-style: bold;
+}
+input{
+	margin: 5px;
+	margin-left: 30px;
+	border-radius: 10%;
+}
+input.tel1{
+	margin: 0px;
+	margin-left: 25px;
+	border-radius: 10%;
+}
+input.tel{
+	margin: 0px;
+	border-radius: 10%;
+}
+textarea{
+	width: 500px;
+	height: 100px;
+	margin: 15px;
+	margin-left: 30px;
+	border-radius: 10%;
+	vertical-align: top;
+}
+select{
+	margin: 15px;
+	margin-left: 30px;
+	border-radius: 10%;
+}
+input.submit{
+	border-radius: 10%;
+	background-color: orange;
+	border:none;
+	font-size: 1.2em;
+	padding: 11px;
+	border-radius: 5px;
+	color: white;
+	margin-left: 18vw;
+	margin-top: 10px;
+}
