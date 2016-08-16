@@ -48,27 +48,29 @@
 				<label for="size">T-Shirt size</label>
 			</div>
 			<div class="form-group">
-				<input type="checkbox" id="mug">
+				<input type="checkbox" value="4.99" id="mug">
 				<label for="mug" class="control-label">JotForm Mug $4.99</label>
 			</div>
 			<div class="form-group">
-				<input type="checkbox" id="pencil">
+				<input type="checkbox" value="2.99" id="pencil" >
 				<label for="pencil">JotForm pencil $2.99</label>
 			</div>
 			<div class="form-group">
-				<input type="checkbox" id="sticker">
+				<input type="checkbox" value="1.99" id="sticker">
 				<label for="sticker">JotForm Sticker $1.99</label>
 			</div>
 			<div class="form-group">
 				<label for="coupon">Coupon Code:</label>
-				<input type="text">
+				<input type="text" id="coupon">
 				<a href="02.html">Generate</a>
 			</div>
 			<div class="form-group">
-				<h3 id="total">Total: $0.00</h3>
+				<h3 id="total"></h3>
+				<h3 id="10pdisc"></h3>
+				<h3 id="max"></h3>
+				<h3 id="un"></h3>
 			</div>
 			<div align="center">
-				<h1 id="demo"></h1>
 				<button type="button" onclick="validate()" class="btn btn-warning">Submit</button>
 			</div>
 		</form>
