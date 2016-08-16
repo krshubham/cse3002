@@ -9,16 +9,24 @@
 	.container{
 		margin-top: 5em;
 	}
+	.label{
+		width: 10%;
+		padding: 1em 1em 1em 1em;
+		margin-bottom: 2em;
+		font-size: 2em;
+	}
 </style>
 <body>
 	<div class="container">
 		<div class="form-group">
-			<label for="username">Enter your username:</label>
+			<label for="username">Enter your username(7 or 8 characters):</label>
 			<input type="text" class="form-control" maxlength="8" minlength="7" id="username">
 		</div>
 		<div align="center" onclick="submit()" class="form-group">
 			<button class="btn btn-success" type="button">Submit</button>
 		</div>
+	</div>
+	<div class="container" id="code">
 	</div>
 </body>
 <script type="text/javascript" src="02.js"></script>
