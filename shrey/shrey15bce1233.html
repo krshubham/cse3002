@@ -37,11 +37,12 @@
 		#hide{
 			display: none;
 		}
-
+		#hide2{
+			display: none;
+		}
 	</style>
 </head>
 <body>
-	<form>
 		<h3 style="color:#4d4d4d; font-size:32px; font-family:Arial">Form Products</h3><hr>
 		<h4 style="color:#4d4d4d">My products</h4>
 		<div class="form-group">
@@ -75,20 +76,26 @@
 
 			<input type="checkbox" name="stickers" id="sticker">JotForm Sticker <span class="price">$1.99</span><br><br>
 
+			<button type="text" id="gen" onclick="coupon()">Generate Coupon</button>
+			<button type="text" id="ent" onclick="ent()">Enter Coupon</button>
+			
+			<div id="hide2">
 			<label>Coupon Code:</label>
-			<input type="text" name="coupon">
-			<button type="text" id="gen" onclick="coupon()">Generate Coupon</button><br>
+			<input type="text" name="coupon" style="margin-left:20px;">
+			</div>
+
 			<div id="hide">
 				<label>Username:</label>
-				<input type="text" id="user"><br><br>
+				<input type="text" id="user" style="margin-left:40px;"><br><br>
+				<button type="text" id="username" onclick="enter()">Enter</button>
 			</div>
+
 		</div>
 		<h4 id="total" style="color:#4d4d4d;">Total</h4>
 		
 		<div align="center">
 			<button type="button" onclick="validate()" id="btn">submit</button>
 		</div>
-	</form>
 </body>
 <script type="text/javascript">
 	var total=Number(0);
@@ -106,7 +113,7 @@
 
 		if(mug.checked){
 			total=total+Number(4.99);
-		}
+		} 
 
 		if(pencil.checked){
 			total=total+Number(2.99);
@@ -125,6 +132,18 @@
 		var show = document.getElementById('hide');
 		show.style.display='block'
 		
+	}
+
+	function ent(){
+		var show=document.getElementById('hide2');
+		show.style.display='block';
+	}
+
+	function enter(){
+
+		var name= document.getElementById('user');
+
+
 	}
 
 </script>
