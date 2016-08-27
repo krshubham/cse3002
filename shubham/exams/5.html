@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>5</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var  i = Number(0);
+		var arr = [];
+		do{
+			var n = Number(prompt("Enter the number"));
+			i++;
+			arr.push(n);
+			if(i===5)
+				break;
+		}while(n!==111);
+		document.write('Number of tries used: ' + i + ' out of 5' );
+		arr.sort();
+		document.write('<br>');
+		document.write('Maximum number: '+ arr[arr.length-1]);
+		document.write('<br>');
+		document.write('Minimum Number: '+ arr[0]);
+	</script>
+	</html>

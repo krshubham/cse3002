@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>4</title>
+</head>
+<body>
+	<h1>Citizenship form</h1>
+	<form onsubmit="register()">
+		<input type="text" maxlength="20" id="name" placeholder="name">
+		<input type="number" id="age" max="80" placeholder="age" min="18">
+		<input type="text" onkeydown="ssncheck()" placeholder="SSN" id="ssn">
+		<input type="password" >
+		<input type="button" value="submit">
+	</form>
+</body>
+<script type="text/javascript">
+	var name = null;
+	var ssn  = null;
+	function register(){
+		name = document.getElementById('name').value;
+		var age = document.getElementById('age').value;
+		ssn = document.getElementById('ssn').value;
+		if(name.length > 20 || age <18 || age > 80 || ssn.length > 8){
+			alert('something went wrong, try again');
+		}
+		else{
+			document.write('hi '+name);
+		}
+	}
+	function ssncheck(){
+		ssn  = document.getElementById('ssn').value;
+		if(ssn.length === 4){
+			var str = ssn;
+			str+='#';
+			//ssn = str;
+			alert(ssn);
+		}
+
+	}
+</script>
+</html>
