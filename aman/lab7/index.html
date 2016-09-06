@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms</title>
+</head>
+<style type="text/css">
+	table,td{
+		border: 1px solid #000;
+	}
+</style>
+<body>
+	<form onsubmit="check(event)">
+		<table>
+			<tr>
+				<td>Reg No:*</td>
+				<td colspan="3">
+					<input type="text">
+				</td>
+			</tr>
+			<tr>
+				<td>Name:* </td>
+				<td colspan="3">
+					<input type="text">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4">
+					Course Selection
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" id="dbms_check">DBMS
+				</td>
+				<td>
+					Credits-4
+				</td>
+				<td>
+					Slot: <select id="dbms_select">
+						<option>select</option>
+						<option>A1</option>
+						<option>A2</option>
+					</select>
+				</td>
+				<td>
+					Faculty: <select id="dbms_fac">
+						<option>select</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" id="ethics_check">Ethics
+				</td>
+				<td>
+					Credits-2
+				</td>
+				<td>
+					Slot: <select id="ethics_select" >
+						<option>Select</option>
+						<option>C1</option>
+						<option>C2</option>
+					</select>
+				</td>
+				<td>
+					Faculty: <select id="ethics_fac">
+						<option>Select</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" id="iwp_check">IWP
+				</td>
+				<td>
+					Credits-4
+				</td>
+				<td>
+					Slot: <select id="iwp_select">
+						<option>Select</option>
+						<option>B1</option>
+						<option>B2</option>
+					</select>
+				</td>
+				<td>
+					Faculty: <select id="iwp_fac">
+						<option>select</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox">Software Engineering
+				</td>
+				<td>
+					Credits-4
+				</td>
+				<td>
+					Slot: <select >
+						<option>Select</option>
+					</select>
+				</td>
+				<td>
+					Faculty: <select>
+						<option>Select</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox">Problem Solving and Object oriented programming
+				</td>
+				<td>
+					Credits-3
+				</td>
+				<td>
+					Slot: <select >
+						<option>Select</option>
+					</select>
+				</td>
+				<td>
+					Faculty: <select>
+						<option>Select</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox">Discrete Mathematics and Graph Theory
+				</td>
+				<td>
+					Credits-4
+				</td>
+				<td>
+					Slot: <select >
+						<option>Select</option>
+					</select>
+				</td>
+				<td>
+					Faculty: <select>
+						<option>Select</option>
+					</select>
+				</td>
+			</tr>
+			<tr id="test">
+				<td>
+					<input type="checkbox">Product Management
+				</td>
+				<td>
+					Credits-4
+				</td>
+				<td>
+					Slot: <select >
+						<option>Select</option>
+					</select>
+				</td>
+				<td>
+					Faculty: <select>
+						<option>Select</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox">Softskills
+				</td>
+				<td>
+					Credits-2
+				</td>
+				<td>
+					Slot: <select >
+						<option>Select</option>
+					</select>
+				</td>
+				<td>
+					Faculty: <select>
+						<option>Select</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox">Computer Architecure
+				</td>
+				<td>
+					Credits-3
+				</td>
+				<td>
+					Slot: <select >
+						<option>Select</option>
+					</select>
+				</td>
+				<td>
+					Faculty: <select>
+						<option>Select</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<input type="submit" value="Select Teachers" onclick="this.value='Register'">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+<script type="text/javascript" src="form.js"></script>
+</html>

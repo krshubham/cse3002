@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body style="background-color:#C8C8C8;">
+<center>
+		<h1>Voting system</h1>
+
+	<div class="container">
+		<div class="col-md-12 col-sm-12">
+			<br><br>
+			<b>Enter the number of candidates:</b>
+			<input type="text" class="form-control" id="cand"/>
+			<br/>
+			<br><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Enter the number of voters:</b>
+			<input type="text" class="form-control" id="voters"/>
+			<br />
+			<br><br>
+			<div align="center">					
+				<button class="btn btn-danger" id="intbtn" onclick="create()">Submit</button>			
+			</div>
+			<br/>			
+			<div class="jumbotron" id="space">
+				<h4 id="voter-info"></h4>
+			</div>	
+			<div align="center">
+				<button class="btn btn-success" onclick="init()">Done</button>
+			</div>			
+		</div>		
+	</div>
+	</center>
+	<body>
+		<script>
+			var c = 0,v = 0;
+			var i = 0;
+			var ranks = [];
+			function init()
+			{
+				
+				if(i < v){
+					if (i===0) {
+						var inputs = document.getElementsByClassName('vote'); 
+						for (var j = 0; j < c; j++) {
+							console.log(Number(inputs[j].value));
+							ranks.push(Number(inputs[j].value));	
+							inputs[j].value = null;
+						}
+					}
+					else {
+						var inputs = document.getElementsByClassName('vote'); 
+						for (var j = 0; j < c; j++) {
+							ranks[j] = Number(ranks[j]) + Number(inputs[j].value);	
+							inputs[j].value = null;
+						}
+					}
+				}
+				else{
+					var maximum = 0;
+					var maximumindex = 0;
+					for (k = 0; k < ranks.length; k++) {
+						if(ranks[k] >=maximum){
+							maximum = ranks[k];
+							maximumindex = k;
+						}
+					}
+					alert('The winner is : candidate ' + (Number(maximumindex)+1));
+				}
+				i++;
+			}
+			function create(){
+				c = Number(document.getElementById('cand').value);
+				v = Number(document.getElementById('voters').value);
+				var info = document.getElementById('voter-info');
+				info.innerHTML = 'Enter the ranks below for the candidates from ' + '1 to '+ c;
+				for(var i=0;i<c;i++){
+					var a = document.createElement('input');
+					a.setAttribute('type','text');
+					a.className = "vote";
+					document.getElementById('space').appendChild(a);
+					document.getElementById('space').appendChild(document.createElement('br'));
+				}
+			}
+
+		</script>
+		</html>

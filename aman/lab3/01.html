@@ -1,0 +1,143 @@
+<!-- Question 1:
+ 	Making the given two forms
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>Forms</title>
+ </head>
+ <style type="text/css">
+ 	body{
+ 		color: #FF69B4;
+ 	}
+ 	option{
+ 		color: #FF69B4;
+ 	}
+ 	form{
+ 		max-width: 40%;
+ 		height: auto;
+ 	}
+ 	legend{
+ 		border-top: 2px solid #FF69B4;
+ 		border-right: 2px solid #FF69B4;
+ 		border-left: 2px solid #FF69B4;
+ 		border-top-right-radius: 5px;
+ 		border-top-left-radius: 5px;
+ 		padding: 5px;
+ 		background-color: #ffe6ff;
+ 		color: #FF1493;
+ 	}
+ 	fieldset{
+ 		background-color: #ffe6ff;
+ 		border-radius: 10px;
+ 		border: 2px solid #FF69B4;
+ 	}
+ 	input{
+ 		box-shadow:inset 0 0 2px 2px pink;
+ 		border: none;
+ 	}
+ 	input,select,textarea{
+ 		border-radius: 5px;
+ 		border:1px solid pink;
+ 		height: 2vw; 	
+ 		padding: 2px;
+ 		font-size: 1.5vw;
+ 		outline: none;
+ 		background: #ffe6ff;
+ 		box-shadow:inset 0 0 2px 2px pink;
+ 		float: right;
+ 		clear: both;
+ 	}
+ 	label{
+ 		margin-right: 5vw;
+ 		display: inline;
+ 		width: 250px;
+ 		font-weight: 900;
+ 	}
+ 	div.form-group{
+ 		margin-bottom: 2vw;
+ 	}
+ 	select{
+ 		width: 19vw;
+ 	}
+ 	select{
+ 		color: #FF69B4;
+ 	}
+ 	select option:first-child{
+ 		color: #FF69B4;
+ 	}
+ 	.mandatory{
+ 		color: red;
+ 	}
+ 	button{
+ 		margin-left: 15vw;
+ 		margin-top: 10px;
+ 	}
+ 	textarea{
+ 		width: 300px;
+ 		height: 150px;
+ 		resize: none;
+ 		margin-left: 10vw;
+ 	}
+ 	button[type="submit"]{
+ 		background-color: hotpink;
+ 		border: none;
+ 		font-size: 1.2em;
+ 		padding: 10px;
+ 		border-radius: 5px;
+ 		color: #fff;
+ 		clear: both;
+ 		float: left;
+ 	}
+ 	#message{
+ 		position: relative;
+ 		top: 25px;
+ 	}
+ </style>
+ <body>
+ 	<form>
+ 		<fieldset>
+ 			<legend>
+ 				Personal
+ 			</legend>
+ 			<div class="form-group">
+ 				<label for="name">
+ 					Name<span class="mandatory">*</span>
+ 				</label>
+ 				<input align="right" type="text" name="name">
+ 			</div>
+ 			<div class="form-group">
+ 				<label>
+ 					Email<span class="mandatory">*</span>
+ 				</label>
+ 				<input align="right" type="email" name="email">
+ 			</div>
+ 			<div class="form-group">
+ 				<label>Phone<span class="mandatory">*</span></label>
+ 				<input align="right" type="text" name="phone" />
+ 			</div>
+ 			<div class="form-group">
+ 				<label for="subject">Subject</label>
+ 				<select>
+ 					<option >Appointment</option>
+ 				</select>
+ 			</div>
+ 		</fieldset>
+ 	</form>
+ 	<br />
+ 	<form>
+ 		<fieldset>
+ 			<legend>
+ 				Message
+ 			</legend>
+ 			<div class="form-group">
+ 				<label id="message">
+ 					Message<span class="mandatory">*</span>
+ 				</label>
+ 				<textarea></textarea>
+ 				<button type="submit">Submit</button>
+ 			</div>
+ 		</fieldset>
+ 	</form>
+ </body>
+ </html>

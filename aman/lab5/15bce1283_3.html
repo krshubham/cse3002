@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Js test</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="01.css"/>
+</head>
+<body>
+	<div class="jumbotron">
+		<h1>Voting system</h1>	
+	</div>
+	<div class="container">
+		<div class="col-md-12 col-sm-12">
+			Enter the number of candidates:
+			<input type="text" class="form-control" id="cand"/>
+			<br />
+			Enter the number of voters:
+			<input type="text" class="form-control" id="voters"/>
+			<br />
+			<div align="center">					
+				<button class="btn btn-danger" id="intbtn" onclick="create()">Submit</button>			
+			</div>
+			<br />			
+			<div class="jumbotron" id="space">
+				<h4 id="voter-info"></h4>
+			</div>	
+			<div align="center">
+				<button class="btn btn-success" onclick="init()">Done</button>
+			</div>			
+		</div>		
+	</div>
+	<body>
+		<script>
+			var c = 0,v = 0;
+			var i = 0;
+			var rankings = [];
+			function init()
+			{
+				//alert(v);
+				if(i < v){
+					if (i===0) {
+						var inputs = document.getElementsByClassName('vote'); 
+						for (var j = 0; j < c; j++) {
+							console.log(Number(inputs[j].value));
+							rankings.push(Number(inputs[j].value));	
+							inputs[j].value = null;
+						}
+					}
+					else {
+						var inputs = document.getElementsByClassName('vote'); 
+						for (var j = 0; j < c; j++) {
+							rankings[j] = Number(rankings[j]) + Number(inputs[j].value);	
+							inputs[j].value = null;
+						}
+					}
+				}
+				else{
+					var max = 0;
+					var high = 0;
+					for (k = 0; k < rankings.length; k++) {
+						if(rankings[k] >=max){
+							max = rankings[k]
+							high = k;
+						}
+					}
+					alert('The winner is : candidate ' + (Number(high)+1));
+				}
+				i++;
+			}
+			function create(){
+				c = Number(document.getElementById('cand').value);
+				v = Number(document.getElementById('voters').value);
+				var info = document.getElementById('voter-info');
+				info.innerHTML = 'Enter the rankings below for the candidates from ' + '1 to '+ c;
+				for(var i=0;i<c;i++){
+					var a = document.createElement('input');
+					a.setAttribute('type','text');
+					a.className = "vote";
+					a.setAttribute('placeholder','Candidate ' + String(Number(i)+1));
+					document.getElementById('space').appendChild(a);
+					document.getElementById('space').appendChild(document.createElement('br'));
+					document.getElementById('space').appendChild(document.createElement('br'));
+				}
+			}
+		</script>
+		</html>

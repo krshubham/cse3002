@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms</title>
+</head>
+<style type="text/css">
+	.container{
+		margin: 100px;
+	}
+	table,td,th{
+		border: 1px solid #000;
+	}
+	th{
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+</style>
+<body>
+	<div class="container">
+		<table>
+			<tr style="background-color:#A4C7D6">
+				<th>Name</th>
+				<th>Value</th>
+			</tr>
+			<tr>
+				<td>Name</td>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td>Sex</td>
+				<td>
+					<input type="radio" value="Male"> Male<br />
+					<input type="radio" value="Female" checked> Female
+				</td>
+			</tr>
+			<tr>
+				<td>Eye Color</td>
+				<td>
+					<select>
+						<option value="green">green</option>
+						<option value="black">black</option>
+						<option value="brown">brown</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Check all that apply</td>
+				<td>
+					<input type="checkbox" value="6feet"> Over 6 feet tall <br />
+					<input type="checkbox" value="200pounds"> Over 200 pounds
+				</td>
+				<tr>
+					<td colspan="2">
+						Describe your athletic ability:<br />
+						<textarea></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<button type="submit" >Enter my information</button>
+					</td>
+				</tr>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

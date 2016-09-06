@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms</title>
+</head>
+<style type="text/css">
+	.container{
+		margin: 100px;
+	}
+	table,td,th{
+		border: 1px solid #000;
+	}
+	th{
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	td{
+		padding-right: 50px;
+	}
+</style>
+<body>
+	<div class="container">
+		<table>
+			<tr>
+				<th colspan="2">
+					Pizza Shop 2.0
+				</th>
+			</tr>
+			<tr>
+				<td>Name</td>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td>Pizza Topping</td>
+				<td>
+					<input type="radio"> Supreme<br />
+					<input type="radio"> Vegetarian<br />
+					<input type="radio">Hawaiian
+				</td>
+			</tr>
+			<tr>
+				<td>Pizza Sauce</td>
+				<td>
+					<select>
+						<option value="green">Tomato</option>
+						<option value="black">black</option>
+						<option value="brown">brown</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Optional extras</td>
+				<td>
+					<input type="checkbox" >Extra Cheese
+					<input type="checkbox" >Gluten free base
+				</td>
+				<tr>
+					<td colspan="2">
+						Delivery instructions:<br />
+						<textarea></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<button type="submit" >Send my order</button>
+					</td>
+				</tr>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
