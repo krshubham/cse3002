@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>A First Program in JavaScript</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var n,a=0,b=0,sumi=0,sumf=0;var num,f;
+            n=window.prompt("Enter number of values");
+            for (var i = 1; i <=n; i++) {
+                f=window.prompt("Enter number");
+                num = Number(f);
+                if(num%1==0){
+                    a++;
+                    sumi+=num;
+                }
+                else{
+                    b++;
+                    sumf+=num;
+                }
+            }
+            document.writeln( "<h1>The integer sum is " + sumi + "</h1>" );
+            document.writeln( "<h1>The float sum is " + sumf + "</h1>" );
+            document.writeln( "<h1>The integer values are " + a + "</h1>" );
+            document.writeln( "<h1>The float values are " + b + "</h1>" );
+        </script>
+    </body>
+</html>

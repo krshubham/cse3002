@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<ul id="main">
+		
+	</ul>
+</body>
+<script type="text/javascript">
+	var ele = document.getElementById('main');
+	for(var i = 1;i<=20;i++){
+		var data = document.createElement("li");
+		data.innerHTML = i+ "<sup>2</sup> = " + i*i;
+		ele.appendChild(data);
+	}
+</script>
+</html>

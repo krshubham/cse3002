@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Js test</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="01.css"/>
+	</head>
+	<body>
+		<div class="jumbotron">
+			<h1>Lulu Supermarket billing system</h1>	
+		</div>
+		<div class="container">
+			<div class="col-md-12 col-sm-12">
+				Enter the integer amounts here:
+				<input type="text" class="form-control" id="int"/>
+				<br />
+				<div align="center">					
+					<button class="btn btn-danger" id="intbtn" onclick="check()">Submit</button>			
+				</div>				
+				<br />
+				<div class="col-md-6">
+					<h2>Your total integer price is:</h2>		
+					<h2 id="totalint"></h2>
+				</div>
+				<div class="col-md-6">
+					<h2>Your total float price is:</h2>		
+					<h2 id="totalfloat"></h2>
+				</div>
+			</div>		
+		</div>
+	<body>
+	<script>
+		var floatarr = [];
+		var intarr = [];	
+		function intcalc(){
+			var inttotal = 0;
+			for(var i=0;i<intarr.length;i++){
+				inttotal = Number(inttotal) + Number(intarr[i]);		
+			}
+			console.log(inttotal);		
+			var totalint = document.getElementById('totalint');
+			totalint.innerHTML = inttotal;		
+		}
+		function floatcalc(){
+			var inttotal = 0;
+			for(var i=0;i<floatarr.length;i++){
+				inttotal = Number(inttotal) + Number(floatarr[i]);		
+			}		
+			var totalfloat = document.getElementById('totalfloat');
+			totalfloat.innerHTML = inttotal;		
+		}
+		function intprice(){			
+			var a = document.getElementById('int');				
+			price = Number(a.value);
+			intarr.push(price);	
+			intcalc();	
+		}
+		function floatprice(){
+			var a = document.getElementById('int');				
+			price = Number(a.value);
+			floatarr.push(price);	
+			floatcalc();
+		}		
+		function check(){
+			var a = document.getElementById('int');
+			if(Number(a.value)%1!==0){
+				floatprice();
+			}
+			else{
+				intprice();			
+			}
+		}
+	</script>
+</html>
+

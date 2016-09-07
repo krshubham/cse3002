@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		var it=0,ft=0,ic=0,fc=0;
+		var n=window.prompt("enter the number of products");
+		for(var i=0;i<parseInt(n);i++)
+		{
+			var p=window.prompt("enter the price");
+			if(p==parseInt(p))
+			{
+				ic++;
+				it=it+parseInt(p);
+			}
+			else
+			{
+				fc++;
+				ft=ft+parseFloat(p);
+			}
+
+
+		}
+		document.write("total integer items is" + ic);
+		document.write("sum items is" + it);
+		document.write("total float itmes is"+fc);
+		document.write("their sum is"+ft);
+	</script>
+</head>
+</html>
