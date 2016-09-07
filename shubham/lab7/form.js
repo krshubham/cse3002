@@ -4,6 +4,7 @@ var dbms_faculty = ['Tulasi Prasad','Pradeep K V'];
 var iwp_faculty = ['Rajiv vincent','Sandhya P'];
 var ethics_faculty = ['Sridhar V G','Nirmal Thyagu'];
 var dbms_slot = '';
+
 function check(event){
 	alert('Register the teachers')
 		/*var e = document.getElementById("dbms");
