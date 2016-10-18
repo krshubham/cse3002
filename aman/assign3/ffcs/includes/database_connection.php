@@ -2,7 +2,7 @@
         $DB_SERVER="localhost";
         $DB_USER="root";
         $DB_PASS="root";
-        $DB_NAME="loankernel";
+        $DB_NAME="favour.me";
 
     //Create a database connection
         $connection = mysqli_connect($DB_SERVER,$DB_USER,$DB_PASS,$DB_NAME);
