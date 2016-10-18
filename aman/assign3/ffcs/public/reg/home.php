@@ -15,90 +15,92 @@
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="home.php">Tag-me-Not</a>
-  </div>
-  <div class="collapse navbar-collapse" id="myNavbar">
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="home.php">Home</a></li>
-      <li><a href="profile.php">My profile</a></li>
-  </ul>
-  <ul class="nav navbar-nav navbar-right">
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-cog"></span>&nbsp;Settings</a>
-        <ul class="dropdown-menu">
-          <li><a href="profile_settings.php">Profile Settings</a></li>
-          <li><a href="account_settings.php">Account Settings</a></li>
-      </ul>
-  </li>
-  <li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-</ul>
-</div>
-</div>
-</nav>
-<div class="container">  
-    <br />  
-    <h2 align="center">Tag-me-Not</h2><br />  
-    <div class="form-group">
-        <div class="input-group">  
-          <span class="input-group-addon">Your post</span> 
-          <input id = "post" type = "text" name = "post_pp" class="form-control"> 
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="home.php">Tag-me-Not</a>
         </div>
-        <br/>
-        <br/>  
-        <div class="input-group">  
-          <span class="input-group-addon">Search</span> 
-          <input type="text" name="search_text" id="search_text" placeholder="Search by Customer Name" class="form-control" />  
-      </div>  
-  </div>  
-  <br/>  
-  <div id="search_result"></div>
-  <br/>
-  <div id="all posts">
-
-  </div>  
-  <div>
-   <a href="logout.php">LOGOUT</a>
-</div>  
-</div>  
-</body>  
-</html>  
-<script>  
-   $(document).keyup(function(){  
-      $('#search_text').keyup(function(){  
-         var txt = $(this).val(); 
-         if(txt != '')  
-         {  
-            $.ajax({  
-               url:"fetch_users.php",  
-               method:"POST",  
-               data:{search:txt},  
-               dataType:"text",  
-               success:function(data) 
-               {  
-                  //alert(data);
-                  $('#search_result').html(data);  
-              }  
-          });  
-        }  
-        else if($(this).val() === ''){
-            $('#search_result').html('');
-        }
-    });  
-  });  
-</script>  
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="home.php">Home</a></li>
+            <li><a href="profile.php">My profile</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-cog"></span>&nbsp;Settings</a>
+                <ul class="dropdown-menu">
+                  <li><a href="profile_settings.php">Profile Settings</a></li>
+                  <li><a href="account_settings.php">Account Settings</a></li>
+                </ul>
+              </li>
+              <li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">  
+        <br />  
+        <h2 align="center">FFCS</h2><br />  
+        <div class="form-group">
+            <br/>
+            <div class="input-group">  
+              <span class="input-group-addon">CSE 2002</span>
+              <span class="input-group-addon">Credits: 4</span>
+              <span class="input-group-addon">DSA</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <button type="button" class="btn btn-success" id="dsa">Register</button>  
+            </div> 
+            <div class="input-group">  
+              <span class="input-group-addon">CSE 2004</span>
+              <span class="input-group-addon">Credits: 4</span>
+              <span class="input-group-addon">DBMS</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <button type="button" class="btn btn-success" id="dbms">Register</button>  
+            </div> 
+            <div class="input-group">  
+              <span class="input-group-addon">CSE 2001</span>
+              <span class="input-group-addon">Credits: 5</span>
+              <span class="input-group-addon">Computer Architecture</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <button type="button" class="btn btn-success" id="ca">Register</button>  
+            </div> 
+            <div class="input-group">  
+              <span class="input-group-addon">CSE 3002</span>
+              <span class="input-group-addon">Credits: 4</span>
+              <span class="input-group-addon">Internet & Web Programming</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <button type="button" class="btn btn-success" id="iwp">Register</button>  
+            </div> 
+            <div class="input-group">  
+              <span class="input-group-addon">CSE 3001</span>
+              <span class="input-group-addon">Credits: 5</span>
+              <span class="input-group-addon">Software Engg.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <button type="button" class="btn btn-success" id="se">Register</button>  
+            </div>
+            <div class="input-group">  
+              <span class="input-group-addon">HUM 1001</span>
+              <span class="input-group-addon">Credits: 4</span>
+              <span class="input-group-addon">Ethics</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <button type="button" class="btn btn-success" id="hum">Register</button>  
+            </div>    
+            <div class="input-group">  
+              <span class="input-group-addon">ENG 1011</span>
+              <span class="input-group-addon">Credits: 6</span>
+              <span class="input-group-addon">English</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <button type="button" class="btn btn-success" id="eng">Register</button>  
+            </div>  
+        </div>  
+        <br/>           
+    </div>  
+    <script src="js/register.js"></script>  
+  </body>  
+</html>
