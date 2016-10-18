@@ -27,10 +27,7 @@
 				$query = "UPDATE lulu SET fsum=$fsum,flot=$flot WHERE id=1";
 				$res = mysqli_query($connection,$query);
 			}	
-		}?>
-		<script type="text/javascript">
-		window.open ('lulu.php','_self',false);
-	</script><?php
+		}
 	}
 ?>
 <!DOCTYPE html>
@@ -45,7 +42,7 @@
 		<div class="jumbotron">
 			<h1>Lulu Supermarket billing system</h1>	
 		</div>
-		<form action="lulu.php" method = "POST">
+		<form action="lulu.php" method = "POST" target="_blank">
 			<div class="container">
 				<div class="col-md-12 col-sm-12">
 					Enter the integer amounts here:
