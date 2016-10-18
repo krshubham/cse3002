@@ -1,8 +1,8 @@
-<?php
-include("../../../includes/database_connection.php");
-include("../../../includes/functions.php");
-include("../../../includes/session.php");
-?>
+<?php 
+  include("../includes/database_connection.php");
+  include("../includes/functions.php");
+  include("../includes/session.php");
+  ?>
 <?php
 	$salt_string = "@!";
 	$output = "";

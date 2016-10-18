@@ -1,8 +1,8 @@
 <?php 
-include("../../../includes/database_connection.php");
-include("../../../includes/session.php");
-include("../../../includes/functions.php");
-?>
+  include("../includes/database_connection.php");
+  include("../includes/functions.php");
+  include("../includes/session.php");
+  ?>
 <?php
 if(logged_in())
     header("Location : home.php");
