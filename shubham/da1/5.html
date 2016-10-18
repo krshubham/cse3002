@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Reservation form</title>
+</head>
+
+<body>
+    <h1 style="text-align:center;">Travel reservation Form</h1>
+    <div class="container">
+        * denotes mandatory
+        <form>
+            <div class="form-group">
+                <label for="Fullname">Full name*:</label><br />
+                <input type="text" placeholder="FirstName LastName" id="fname">
+            </div>
+            <div class="form-group">
+                <label for="EmailAddress">EmailAddress*:</label><br/>
+                <input type="email" placeholder="EMAIL_ADDRESS" id="email">
+            </div>
+            <div class="form-group">
+                <label for="tour">Select Tour Package* :</label><br />
+                <select id="tour_pkg">
+                    <option value="Goa">Goa</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Arrival">Arrival Date*:</label><br>
+                <input type="text" placeholder="m/d/y" id="arrival">
+            </div>
+            <div class="form-group">
+                <label for="Number">Number of Persons*: </label><br>
+                <input type="text" placeholder="UNKNOWN_TYPE" id="number">
+            </div>
+            <div class="form-group">
+                <label for="what">What would you like to avail?*</label><br> Boarding <input type="checkbox" name="avail"
+                    id="b"><br> Fooding
+                <input type="checkbox" name="avail" id="f"><br> Sight Seeing <input type="checkbox" name="avail" id="s">
+            </div>
+            <div class="form-group">
+                Discount Coupon Code: <br>
+                <input type="text" placeholder="UNKNOWN_TYPE" id="code">
+            </div>
+            <div class="form-group">
+                <label for="Terms">Terms and conditions*</label><br/>
+                <input type="radio" name="terms" id="agree">I agree
+                <input type="radio" id="disagree" name="terms">I disagree
+            </div>
+            <div class="form-group">
+                <input type="button" onclick="test()" value="Complete Reservation" />
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    function test(){
+        //alert("hello");
+        var name = document.getElementById('fname').value;
+        var email = document.getElementById('email').value;
+        var tour_pkg = document.getElementById('tour_pkg').value;        
+        var arrival = document.getElementById('arrival').value;
+        var num = document.getElementById('number').value;
+        var agree = document.getElementById('agree').checked;
+        var disagree = document.getElementById('disagree').checked;
+        var b = document.getElementById('b').checked;
+        var f = document.getElementById('f').checked;
+        var s = document.getElementById('s').checked;
+        if(!name || !email || !arrival || !num || disagree || (!b && !f && !s)){
+            alert('Unable to complete. Please check the values');
+        }
+        else{
+        emailCheck = validateEmail(email);
+        if(!emailCheck){
+            alert("Email format is wrong");
+        }
+        else{
+            alert('Successful');
+        }
+        }
+        return false;
+    }
+    function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+</script>
+
+<style>
+    body {
+        overflow: hidden;
+    }
+    
+    .container {
+        width: 80%;
+        position: absolute;
+        right: 50%;
+        left: 40%;
+    }
+    
+    .form-group {
+        margin-top: 1em;
+    }
+</style>
+
+</html>

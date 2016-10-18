@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Student Information</title>
+
+	<style>
+		#header {
+			background-color: #cccd99;
+			padding: 1em;
+			width: 60%;
+		}
+		
+		#student {
+			font-size: 2em;
+			position: relative;
+			top: 0.2em;
+		}
+		
+		textarea {
+			overflow-y: scroll;
+			overflow-x: scroll;
+			height: 200px;
+			width: 200px;
+			resize: none;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div id="header">
+		<label id="student">Student Information</label>
+	</div><br><br>
+	<form method="post" name="myForm" onsubmit="validate();">
+		<table>
+			<tr>
+				<th>First Name: </th>
+				<th><input type="text" name="fname" id="fname"></th>
+			</tr>
+			<tr>
+				<th>Last Name: </th>
+				<th><input type="text" name="lname" id="lname"></th>
+			</tr>
+			<tr>
+				<th>Phone# </th>
+				<th><input type="text" name="phone" id="phone"></th>
+			</tr>
+			<tr>
+				<th>section# </th>
+				<th><input type="text" name="section" id="section"></th>
+			</tr>
+			<tr>
+				<th>email: </th>
+				<th><input type="text" name="email" id="email"></th>
+			</tr>
+		</table>
+		<p>Explain your educational goals. Why are you at VIT and why have you enrolled in this class.</p>
+		<textarea style="margin-left:1.7em;" cols="30" rows="15">
+		</textarea>
+		<p>Describe your previous experience with computers</p>
+		<textarea style="margin-left:1.7em;" cols="30" rows="15">
+		</textarea>
+		<p>Share your personal story, introduce us to your family and friends and tell us about your hobbies and interests.</p>
+		<textarea style="margin-left:1.7em;" cols="30" rows="15">
+			</textarea>
+
+		<p>Congratulations to all of you who successfully completed this page. You have one more hurdle to jump.</p> <br>
+
+		<input type="submit" value="Check in">&nbsp;&nbsp;
+		<input type="submit" value="Clear">
+	</form>
+</body>
+
+<script>
+			function validate() {
+				//checking the firstname
+				var fname = document.forms["myForm"]["fname"].value;
+				if(!fname){
+					alert("First Name is required");
+				}
+				else if(/[^A-Za-z\s]/.test(fname)){
+					alert("Invalid First Name");
+				}
+				//checking the last name
+				var lname = document.forms["myForm"]["lname"].value;
+				if(!lname){
+					alert("Last Name is required")
+				}
+				else if(/[^A-Za-z\s]/.test(lname)){
+					alert("Invalid Last Name");
+				}
+				//checking the phone number
+				var phone = Number(document.forms["myForm"]["phone"].value);
+				if(!phone){
+					alert("Phone Number is required");
+				}
+				else if(Number.isNaN(phone)){
+					alert("Invalid Phone Number");
+				}
+				//checking the section
+				var section = document.forms["myForm"]["section"].value;
+				if(!section){
+					alert("Section is required");
+				}
+				else if(/[^A-Za-z\s]/.test(section)){
+					alert("Invalid Section");
+				}
+				//Email verification
+				var email = document.forms["myForm"]["email"].value;
+				var atpos = email.indexOf("@");
+				var dotpos = email.lastIndexOf(".");
+				if(!email){
+					alert("email is required");
+				}
+				else if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length) {
+					alert("Not a valid e-mail address");
+				}
+				return false;
+			}	
+		</script>
+
+</html>
