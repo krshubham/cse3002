@@ -18,8 +18,33 @@
 	$register = $_POST['register'];
 	$query = "SELECT credits FROM user_details WHERE user_id=$current_user_id";
 	$result = mysqli_query($connection,$query);
-	if($result)
+	$row = mysqli_fetch_assoc($result);
+	$credits = $row['credits'];
+	if($register && $credits<27)
 	{
+		$query = "SELECT * FROM reg_courses WHERE user_id=$current_user_id AND name='$subject'";
+		$result = mysqli_query($connection,$query);
+		echo "$query";
+		if(mysqli_num_rows($result)==0)
+		{
+			$query = "INSERT INTO reg_courses(user_id,name) VALUES($current_user_id,'$subject')";
+			$result_q =  mysqli_query($connection,$query);
+			if($result_q)
+				echo "Registered";
+		}
+		else
+			echo "Already Registered";
 		
+	}
+
+	if($register && $credits>=27)
+		echo "Credits already 27";
+
+	if($register == 0)
+	{
+		$query = "DELETE FROM reg_courses WHERE user_id=$current_user_id AND name='$subject'";
+		$result_q =  mysqli_query($connection,$query);
+		if($result_q)
+			echo "Unregistered";
 	}
  ?>  

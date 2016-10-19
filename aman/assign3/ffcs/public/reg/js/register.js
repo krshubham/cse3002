@@ -2,11 +2,11 @@ $(document).ready(function(){
 	$('#dbms').on("click", function () {
 		var subject = $(this).attr('id');  
 		if($(this).html()=="Register"){
-			$(this).html("Registerd");
+			$(this).html("Unregister");
 		    $.ajax({
 			  type: 'POST',
 			  url: 'register.php',
-			  data: {subject: subject,register:0},
+			  data: {subject: subject,register:1},
 			  success: function(data){
 			  	window.alert(data);
 			  	//checkStatus(data);
@@ -19,7 +19,7 @@ $(document).ready(function(){
 		    $.ajax({
 			  type: 'POST',
 			  url: 'register.php',
-			  data: {subject: subject,register:1},
+			  data: {subject: subject,register:0},
 			  success: function(data){
 			  	window.alert(data);
 			  	//checkStatus(data);
