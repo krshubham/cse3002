@@ -59,43 +59,46 @@
             <div class="input-group">  
               <span class="input-group-addon">CSE 2002</span>
               <span class="input-group-addon">Credits: 4</span>
-              <span class="input-group-addon">DSA</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <span class="input-group-addon">DSA</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
               <button type="button" class="btn btn-success" id="dsa">Register</button>  
             </div> 
+            <br/>
             <div class="input-group">  
               <span class="input-group-addon">CSE 2004</span>
               <span class="input-group-addon">Credits: 4</span>
-              <span class="input-group-addon">DBMS</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <span class="input-group-addon">DBMS</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
               <button type="button" class="btn btn-success" id="dbms">Register</button>  
-            </div> 
+            </div> <br/>
             <div class="input-group">  
               <span class="input-group-addon">CSE 2001</span>
               <span class="input-group-addon">Credits: 5</span>
-              <span class="input-group-addon">Computer Architecture</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <span class="input-group-addon">Computer Architecture</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <button type="button" class="btn btn-success" id="ca">Register</button>  
-            </div> 
+            </div> <br/>
             <div class="input-group">  
               <span class="input-group-addon">CSE 3002</span>
               <span class="input-group-addon">Credits: 4</span>
-              <span class="input-group-addon">Internet & Web Programming</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <span class="input-group-addon">Internet & Web Programming</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <button type="button" class="btn btn-success" id="iwp">Register</button>  
-            </div> 
+            </div> <br/>
             <div class="input-group">  
               <span class="input-group-addon">CSE 3001</span>
               <span class="input-group-addon">Credits: 5</span>
-              <span class="input-group-addon">Software Engg.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <span class="input-group-addon">Software Engg.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
               <button type="button" class="btn btn-success" id="se">Register</button>  
-            </div>
+            </div><br/>
             <div class="input-group">  
               <span class="input-group-addon">HUM 1001</span>
               <span class="input-group-addon">Credits: 4</span>
-              <span class="input-group-addon">Ethics</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <span class="input-group-addon">Ethics</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
               <button type="button" class="btn btn-success" id="hum">Register</button>  
-            </div>    
+            </div><br/>    
             <div class="input-group">  
               <span class="input-group-addon">ENG 1011</span>
               <span class="input-group-addon">Credits: 6</span>
-              <span class="input-group-addon">English</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <span class="input-group-addon">English</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
               <button type="button" class="btn btn-success" id="eng">Register</button>  
             </div>  
         </div>  
