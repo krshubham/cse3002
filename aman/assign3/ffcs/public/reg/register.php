@@ -24,11 +24,12 @@
 	{
 		$query = "SELECT * FROM reg_courses WHERE user_id=$current_user_id AND name='$subject'";
 		$result = mysqli_query($connection,$query);
-		echo "$query";
 		if(mysqli_num_rows($result)==0)
 		{
 			$query = "INSERT INTO reg_courses(user_id,name) VALUES($current_user_id,'$subject')";
 			$result_q =  mysqli_query($connection,$query);
+			$query = "UPDATE user_details SET credits=$credits+5 WHERE user_id=$current_user_id";
+			$result_qq = mysqli_query($connection,$query);
 			if($result_q)
 				echo "Registered";
 		}
