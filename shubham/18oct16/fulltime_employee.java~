@@ -1,33 +1,29 @@
 import java.util.*;
-import java.io.*;
-class Employee
-{
-	int emp_id = 101;
-	String name="Aman",gender="Male",city = "Kolkata";
+
+class Employee{
+	int emp_id = 123;
+	String name="Shubham",gender="Male",city = "Chandigarh";
 }
 
-class fulltime_employee extends Employee
-{
+public class fulltime_employee extends Employee{
 	int salary;
 	int units = 7;
 	double bonus;
-	public void main(String args[])
-	{
-		
-		InputStreamReader read = new InputStreamReader(System.in);
-		BufferedReader br = new BufferedReader(read);
-		
+	public static void main(String args[]){
+		//instantiate the scanner class for taking the input
+		Scanner sc = new Scanner(System.in);
+		//instantiate the class as fte.
 		fulltime_employee fte = new fulltime_employee();
 		System.out.println("Enter the name of the person: ");
-		fte.name = br.readLine();
+		fte.name = sc.next();
 		System.out.println("Enter the id of the Employee: ");
-		fte.emp_id = Integer.parseInt(br.readLine());
+		fte.emp_id = sc.nextInt();
 		System.out.println("Enter the gender of the employee: ");
-		fte.gender = br.readLine();
+		fte.gender = sc.next();
 		System.out.println("Enter the city of the Employee: ");
-		fte.city = br.readLine();
+		fte.city = sc.next();
 		System.out.println("Enter the salary fo the Employee");
-		fte.salary = Double.parseDouble(br.readLine());
+		fte.salary = sc.nextInt();
 		if(fte.salary<5000 && fte.units>10){
 			fte.bonus = 0.25*fte.salary;
 		}

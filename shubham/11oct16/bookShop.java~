@@ -34,7 +34,7 @@ public class bookShop extends Book{
         for(int i=0;i<3;i++){
             if(arr[i].id==idToFind && arr[i].numOfCopies>=copies){
                 System.out.println("Yes the copies are available");
-                System.out.println("The Total Cost is: "+ arr[i].price*copies);
+                System.out.println("The total cost is: "+ arr[i].price*copies);
             }
         }
     }
