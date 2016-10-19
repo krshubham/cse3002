@@ -31,7 +31,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="home.php">Tag-me-Not</a>
+        <a class="navbar-brand" href="home.php">FFCS</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
@@ -53,7 +53,10 @@
     </nav>
     <div class="container">  
         <br />  
-        <h2 align="center">FFCS</h2><br />  
+        <h2 align="center">FFCS</h2><br />
+        <h4 align="navbar-left">Credits Registered</h4>
+        <h4 id="tc">6</h4>
+        <br />
         <div class="form-group">
             <br/>
             <div class="input-group">  
