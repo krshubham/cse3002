@@ -45,6 +45,8 @@
 	{
 		$query = "DELETE FROM reg_courses WHERE user_id=$current_user_id AND name='$subject'";
 		$result_q =  mysqli_query($connection,$query);
+		$query = "UPDATE user_details SET credits=$credits-5 WHERE user_id=$current_user_id";
+			$result_qq = mysqli_query($connection,$query);
 		if($result_q)
 			echo "Unregistered";
 	}
