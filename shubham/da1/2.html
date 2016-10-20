@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Question 2</title>
+</head>
+
+<body>
+    <h1 style="text-align:center;">Grades and Results</h1>
+    <form>
+        <div class="form-group">
+            <label for="Math">Math</label><br>
+            <input type="text">
+        </div>
+        <div class="form-group">
+            <label for="English">English</label><br>
+            <input type="text"><br>
+        </div>
+        <div class="form-group">
+            <label for="Python">Python</label><br>
+            <input type="text"><br>
+        </div>
+        <div class="form-group">
+            <label for="C++">C++</label><br>
+            <input type="text">
+        </div>
+        <div class="form-group">
+            <label for="Physics">Physics</label><br>
+            <input type="text">
+        </div>
+        <input type="button" onclick="grade()" value="submit" />
+    </form>
+    <div id="results">
+    </div>
+</body>
+<script>
+    function grade(){
+        var subs = ['Physics','C++','Python','English','Math'];
+        subs.reverse();
+        //alert('hello');
+        var inputs = document.getElementsByTagName('input');
+        //console.log(inputs);
+        var results = [];
+        for(var i = 0;i<inputs.length;i++){
+            var val = Number(inputs[i].value);
+            if(val>=90){
+                results.push('A');
+            }
+            else if(val>= 80){
+                results.push('B')
+            }
+            else if(val>=70){
+                results.push('C');
+            }
+            else{
+                results.push('NP');
+            }
+        }
+        var area = document.getElementById('results');
+        for(var i = 0;i<inputs.length-1;i++){
+            var span = document.createElement('span');
+            span.innerHTML = "Grade in "+subs[i]+" is "+results[i]+ "<br />" ;
+            document.getElementById('results').appendChild(span);
+        }
+        console.log(results);
+        return false;
+    }
+</script>
+<style>
+    .form-group{
+        margin-top: 1em;
+    }
+    input[type="button"]{
+        margin-top:1em;
+    }
+    form{
+        margin-left: 40%;
+    }
+</style>
+
+</html>

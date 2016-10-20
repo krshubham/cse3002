@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Zebra Striping a Table</title>
+
+  <style>
+    body {
+      overflow: hidden;
+    }
+    
+    table {
+      border: 1px solid black;
+      margin-top: 5em;
+      margin-left: 30em;
+    }
+    
+    @media screen and (max-width:400px) {
+      table {
+        margin-top: 5em;
+        margin-left: 5em;
+      }
+    }
+    
+    #main {
+      background-color: #bdbdbd;
+    }
+    
+    tr:nth-child(even) {
+      background-color: green;
+    }
+  </style>
+</head>
+
+<body>
+
+  <table>
+    <tr id="main">
+      <th>Id</th>
+      <th>Name</th>
+      <th>Major</th>
+    </tr>
+    <tr>
+      <td>1001</td>
+      <td>Gopal Murthy</td>
+      <td>Physics</td>
+    </tr>
+    <tr>
+      <td>1002</td>
+      <td>Joy Sen</td>
+      <td>Economics</td>
+    </tr>
+    <tr>
+      <td>1003</td>
+      <td>Chandu Yadav</td>
+      <td>Chemistry</td>
+    </tr>
+    <tr>
+      <td>1004</td>
+      <td>Shalini Gupta</td>
+      <td>Zoology</td>
+    </tr>
+    <tr>
+      <td>1004</td>
+      <td>Vivek Kumar</td>
+      <td>Math</td>
+    </tr>
+    <tr>
+      <td>1004</td>
+      <td>Sameer Ali</td>
+      <td>Botany</td>
+    </tr>
+  </table>
+
+</body>
+
+</html>
