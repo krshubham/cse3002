@@ -8,7 +8,7 @@ class Employee
 
 class fulltime_employee extends Employee
 {
-	int salary;
+	double salary;
 	int units = 7;
 	double bonus;
 	public void main(String args[])
