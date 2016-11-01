@@ -20,19 +20,20 @@ class Book{
 
 public class bookShop extends Book{
     public static void main(String args[]){
-        int idToFind, copies;
+        int find, copies;
         Scanner sc = new Scanner(System.in);
         bookShop bs = new bookShop();
-        Book[] arr = new Book[3];
-        arr[0] = new Book("Aman","Maths","Das",321,2,105.25);
-        arr[1] = new Book("Halliday","Physics","R&D",322,1,670);
-        arr[2] = new Book("Das Gupta","Biology","Bhubh",323,0,315);
+        Book[] arr = new Book[4];
+        arr[0] = new Book("H.C. Verma","Concepts of Physics","Das",1,2,215.25);
+        arr[1] = new Book("Halliday","Modern Physics","R&D",2,1,670);
+        arr[2] = new Book("Sumita Arora","Let Us C","Bhubh",3,3,315);
+        arr[3] = new Book("Sumita Arora","Let Us C++","Bhubh",4,0,350);
         System.out.println("Enter the id of the book: ");
-        idToFind = sc.nextInt();
+        find = sc.nextInt();
         System.out.println("Enter the number of copies: ");
         copies = sc.nextInt();
-        for(int i=0;i<3;i++){
-            if(arr[i].id==idToFind && arr[i].numOfCopies>=copies){
+        for(int i=0;i<4;i++){
+            if(arr[i].id==find && arr[i].numOfCopies>=copies){
                 System.out.println("Yes the copies are available");
                 System.out.println("The Total Cost is: "+ arr[i].price*copies);
             }

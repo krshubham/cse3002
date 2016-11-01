@@ -3,7 +3,7 @@ import java.io.*;
 class Employee
 {
 	int emp_id = 101;
-	String name="Aman",gender="Male",city = "Kolkata";
+	String name="Hargur",gender="Male",city = "Chandigarh";
 }
 
 class fulltime_employee extends Employee
